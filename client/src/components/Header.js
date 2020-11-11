@@ -22,6 +22,7 @@ const Header = (props) => {
     <div className='row' style={{padding:"10px"}} >
       <div className='col-md-12'>
       <Navbar  expand="lg" style={{backgroundColor:"snow"}}>
+        
       
   
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
