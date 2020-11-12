@@ -16,7 +16,7 @@ const SearchWidget = (props) => {
     
   }, [result]);
   if(!result){
-    return(<div>no con</div>)
+    return(<div text-danger>wating for input....</div>)
   }
   return (
     <div className="row container-fluid" style={{ paddingTop: "20px" }}>
