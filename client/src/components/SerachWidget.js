@@ -21,7 +21,7 @@ const SearchWidget = (props) => {
     return(<div>no con</div>)
   }
   return (
-    <div className="row container-fluid" style={{ paddingTop: "20px" }}>
+    <div className="row " style={{ paddingTop: "20px" }}>
       <div className="col-md-12 ">
         <Accordion>
           {props.wikiresulrt.map((x, index) => (
@@ -31,11 +31,9 @@ const SearchWidget = (props) => {
                 eventKey={x.publishedAt}
               >
                 <div className="row">
-                  <div className="col-md-3 offset-md-1  text-left">
-                    <span class="fas fa-angle-double-down "></span>
-                  </div>
-                  <div className="col-md-8 ">
-                    <p class=" text-truncate text-left text-dark" >{x.title}</p>
+                  
+                  <div className="col-md-12 ">
+                    <p class=" text-truncate text-left text-dark" >{x.title}<span class="fas fa-angle-double-down float-right text-info"></span></p>
                   </div>
                 </div>
               </Accordion.Toggle>

@@ -28,7 +28,7 @@ const App = (props) => {
       );
     }
     return (
-      <div className="Container fluid" style={{ padding: "20px" }}>
+      <div className="" >
         <h1 className='text-center ' style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}> Simple News,Wikipidia,starwars Movies Search App</h1>
         <Router>
           <Header />
@@ -43,7 +43,7 @@ const App = (props) => {
   };
 
   return (
-    <div className="Container fluid" style={{ padding: "20px" }}>
+    <div className="" style={{ padding: "10px" }}>
       {displayNoInternet()}
     </div>
   );

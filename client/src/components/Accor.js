@@ -10,9 +10,9 @@ const Accor = ({ files }) => {
         '/api/topheadline'
       );
       setSearchResult(data);
-      if(!searchResult){
+      /*if(!searchResult){
         window.location.reload()
-      }
+      }*/
     };
     wikiresulr();
 

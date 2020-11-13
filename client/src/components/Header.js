@@ -19,7 +19,7 @@ const Header = (props) => {
  }
   
   return (
-    <div className='row' style={{padding:"10px"}} >
+    <div className='row'  >
       <div className='col-md-12'>
       <Navbar  expand="lg" style={{backgroundColor:"snow"}}>
         
