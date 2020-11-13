@@ -29,7 +29,7 @@ const App = (props) => {
     }
     return (
       <div className="Container fluid" style={{ padding: "20px" }}>
-        <h1 className='text-center text-dark'>A simple News,Wikipidia,starwars Movies Search App</h1>
+        <h1 className='text-center ' style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}> Simple News,Wikipidia,starwars Movies Search App</h1>
         <Router>
           <Header />
 

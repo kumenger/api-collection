@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
 import {reducer as fromReducer  } from 'redux-form'
 import _ from 'lodash'
-
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 const getwikireduce=(state=[],action)=>{
     if(action.type==="Get_Result"){
       const newsState=_.concat([], action.payload)
@@ -9,5 +10,13 @@ const getwikireduce=(state=[],action)=>{
     }
     return state
 }
+const rootPersistConfig = {
+  key: "root",
+  storage,
+  blacklist: [
+    'form'
 
-export default combineReducers({form:fromReducer,getwikireduce:getwikireduce})
+  ],
+}
+
+export default persistReducer(rootPersistConfig, combineReducers({form:fromReducer,getwikireduce:getwikireduce}))

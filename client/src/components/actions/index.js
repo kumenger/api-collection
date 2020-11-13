@@ -28,9 +28,9 @@ import qs from 'qs'
     export const getNews=(newsToBeSearched)=> async dispatch=>{
      const newsToBeSearche={term:newsToBeSearched}
        
-        const respose=await axios.get('/api/searchNew',newsToBeSearche)
+        const respose=await axios.post('/api/searchNew',newsToBeSearche)
         
-      dispatch({type:"Get_Result",payload:respose.data})   }
+      dispatch({type:"Get_Result",payload:respose.data.articles})   }
         
 
 

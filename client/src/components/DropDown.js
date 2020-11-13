@@ -402,29 +402,22 @@ const DropDown = () => {
     );
   };
 
- const wait=()=> {
-   return(<div className="text-center">
-   <p className=" text-danger">loding...</p>
-<div className="spinner-border" role="status">
 
-</div>
-</div>)
- }
  console.log(starResult)
   return (
     <div>
       <div className="row">
         <div className="col-xs-12 col-md-s col-md-12">
-          <h1 className="text-dark text-center">
+          <h3 className="text-dark text-center" style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}>
             All the Star Wars data you've ever wanted,From all SEVEN Star Wars
             films
-          </h1>
+          </h3>
           
         </div>
       </div>
       <div class="row">
         <div className="col-xs-12 col-md-s col-md-12  ">
-          <h2 className="text-center text-success">
+          <h2 className="text-center" style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}>
             Planets, Spaceships,People, Films and Species
           </h2>
         </div>

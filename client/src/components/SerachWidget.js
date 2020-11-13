@@ -30,12 +30,12 @@ const SearchWidget = (props) => {
                 class="form-control btn btn-outline-info"
                 eventKey={x.publishedAt}
               >
-                <div className="row ">
-                  <div className="col-md-2">
-                    <span class="fas fa-angle-double-down fa-2x"></span>
+                <div className="row">
+                  <div className="col-md-3 offset-md-1  text-left">
+                    <span class="fas fa-angle-double-down "></span>
                   </div>
-                  <div className="col-md-10 ">
-                    <p class="text-truncate">{x.title}</p>
+                  <div className="col-md-8 ">
+                    <p class=" text-truncate text-left text-dark" >{x.title}</p>
                   </div>
                 </div>
               </Accordion.Toggle>

@@ -15,7 +15,7 @@ const Header = (props) => {
   },[term])
  const termchange=()=>{
   props.getNews(term)
-  setTerm("")
+ 
  }
   
   return (
