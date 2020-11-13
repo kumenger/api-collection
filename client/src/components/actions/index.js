@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+import { json } from 'body-parser';
+import qs from 'qs'
 /*export  const getSearc=(term)=>async dispatch=>{
     const response= await axios.get(`
     https://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&format=json&srsearch=${term}`)
@@ -20,9 +21,14 @@ import axios from 'axios'
         const respose=await axios.request(options)
        
       dispatch({type:"Get_Result",payload:respose.data.value})   }*/
-
+     
+  
+ 
+  
     export const getNews=(newsToBeSearched)=> async dispatch=>{
-        const respose=await axios.get('api/searchNew',{term:newsToBeSearched})
+     const newsToBeSearche={term:newsToBeSearched}
+       
+        const respose=await axios.get('/api/searchNew',newsToBeSearche)
         
       dispatch({type:"Get_Result",payload:respose.data})   }
         

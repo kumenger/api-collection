@@ -19,9 +19,9 @@ const DropDown = () => {
   useEffect(() => {
     const search = async () => {
       const resp = await axios
-        .get(`https://swapi.dev/api/${select}/${numbers}`)
+        .post('/api/starwar',{select:select,numbers:numbers})
         .catch((error) => {
-          console.log(error);
+          
           setError(error.response);
           //.catch((error)=>{setError(error.response.data.detail)
         });
@@ -401,7 +401,16 @@ const DropDown = () => {
       </p>
     );
   };
-  console.log(erro);
+
+ const wait=()=> {
+   return(<div className="text-center">
+   <p className=" text-danger">loding...</p>
+<div className="spinner-border" role="status">
+
+</div>
+</div>)
+ }
+ console.log(starResult)
   return (
     <div>
       <div className="row">
@@ -410,6 +419,7 @@ const DropDown = () => {
             All the Star Wars data you've ever wanted,From all SEVEN Star Wars
             films
           </h1>
+          
         </div>
       </div>
       <div class="row">

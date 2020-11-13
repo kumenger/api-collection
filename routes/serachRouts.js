@@ -1,8 +1,10 @@
 const axios=require('axios')
+const qs = require('qs')
 const Router=require('express').Router()
- Router.route('/searchNew/').get((req,res)=>{
-    const newsToBeSearched=req.body.term
-    axios.get(`https://newsapi.org/v2/everything?q=${newsToBeSearched}&apiKey=295bd0f691604b7f94c1404c1d390e9d`).then((response)=>{res.status(200).json(response.data.articles)}).catch((err)=>{res.status(500).json(err.message)})
+ Router.route('/searchNew').get((req,res)=>{
+    newsToBeSearched=req.body
+  
+    axios.get(`https://newsapi.org/v2/everything?q=${qs.stringify(newsToBeSearched)}&apiKey=295bd0f691604b7f94c1404c1d390e9d`).then((response)=>{res.status(200).json(response.data)}).catch((err)=>{res.status(500).json(err.message)})
 
 })
 Router.route('/topheadline').get((req,res)=>{
@@ -12,6 +14,10 @@ Router.route('/topheadline').get((req,res)=>{
     "apiKey=295bd0f691604b7f94c1404c1d390e9d").then((response)=>{res.status(200).json(response.data.articles)}).catch((err)=>{res.status(500).json(err.message)})
 
 })
-   
+ Router.route('/starwar').post((req,res)=>{
+     const select=req.body.select;
+     const numbers=req.body.numbers;
+     axios.post(`http://swapi.dev/api/${select}/${numbers}`).then((resp)=>{res.status(200).json(resp.data)}).catch((err)=>{res.status(500).json(err.message)})
+ }) 
 
 module.exports=Router

@@ -17,7 +17,7 @@ const Header = (props) => {
   props.getNews(term)
   setTerm("")
  }
-
+  
   return (
     <div className='row' style={{padding:"10px"}} >
       <div className='col-md-12'>

@@ -7,22 +7,24 @@ import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 
 const SearchWidget = (props) => {
+
   const [result, setResult] = useState(props.wikiresulrt);
   const [con, setcon] = useState(false);
   useEffect(() => {
-    
+    if (navigator.onLine) {
+      setcon(true);
       setResult(props.wikiresulrt);
-    
+    }
     
   }, [result]);
-  if(!result){
-    return(<div text-danger>wating for input....</div>)
+  if(!props.wikiresulrt){
+    return(<div>no con</div>)
   }
   return (
     <div className="row container-fluid" style={{ paddingTop: "20px" }}>
       <div className="col-md-12 ">
         <Accordion>
-          {result.map((x, index) => (
+          {props.wikiresulrt.map((x, index) => (
             <div>
               <Accordion.Toggle
                 class="form-control btn btn-outline-info"
