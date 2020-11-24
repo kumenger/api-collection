@@ -10,6 +10,14 @@ const getwikireduce=(state=[],action)=>{
     }
     return state
 }
+const fetchPicsReducer=(state={status:"",pictures:""},action)=>{
+  switch(action.type){
+      case "FETCH_PICS":
+          return {...state,status:"ok",pictures:action.payload}
+          default:
+              return state;
+  }
+}
 const rootPersistConfig = {
   key: "root",
   storage,
@@ -19,4 +27,4 @@ const rootPersistConfig = {
   ],
 }
 
-export default persistReducer(rootPersistConfig, combineReducers({form:fromReducer,getwikireduce:getwikireduce}))
+export default persistReducer(rootPersistConfig, combineReducers({form:fromReducer,getwikireduce:getwikireduce,fetchPicsReducer:fetchPicsReducer}))

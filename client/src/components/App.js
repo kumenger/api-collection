@@ -6,6 +6,7 @@ import Header from "./Header";
 import DropDown from "./DropDown";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ImgaeComponenet from  "./ImgaeComponenet"
 
 const App = (props) => {
   const [checkonncetio, setcheckConnection] = useState("online");
@@ -29,7 +30,7 @@ const App = (props) => {
     }
     return (
       <div className="" >
-        <h1 className='text-center ' style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}> Simple News,Wikipidia,starwars Movies Search App</h1>
+        <h1 className='text-center ' style={{fontFamily:"monospace",color:"royalblue",fontWeight:"bold"}}>  News Wikipidia Image starwars Movies Search App</h1>
         <Router>
           <Header />
 
@@ -37,6 +38,7 @@ const App = (props) => {
           <Route path="/SearchWidgetMain" component={SearchWidgetMain} />
           <Route path="/DropDown" component={DropDown} />
           <Route path="/SearchWidget" component={SearchWidget} />
+          <Route path="/ImgaeComponenet" component={ImgaeComponenet}/>
         </Router>
       </div>
     );
