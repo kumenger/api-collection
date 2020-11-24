@@ -47,7 +47,7 @@ const SearchWidgetMain = () => {
               className="btn btn-outline-info"
               onClick={() => getres(term)}
             >
-              Wiki Serach
+          <i class="fas fa-search"></i>     Wiki Serach
             </button>
           </div>
         </div>

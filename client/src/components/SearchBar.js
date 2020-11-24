@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
               <input placeholder='Type here' className='form-control' type='text' value={this.state.inputerText} onChange={(e)=>this.setState({inputerText:e.target.value})}/>
             </div>
            < div className='col-2 text-left '>
-            <button onClick={this.buttonClick} className='btn btn-info'>Search</button>
+            <button onClick={this.buttonClick} className='btn btn-info'><i class="fas fa-search"></i> Search</button>
           </div>
             </div>
         )
