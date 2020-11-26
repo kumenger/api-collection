@@ -28,15 +28,15 @@ const Header = (props) => {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link ><Link to="/"><button className='btn btn-outline-info'><i class="far fa-newspaper"></i> word News</button></Link></Nav.Link>
-      <Nav.Link ><Link to="/SearchWidgetMain"><button className='btn btn-outline-info'><i class="fab fa-wikipedia-w"></i> wikipidia Search</button></Link></Nav.Link>
-      <Nav.Link ><Link to="/DropDown"><button className='btn btn-outline-info'><i class="fab fa-galactic-senate"></i> Star War Movies</button></Link></Nav.Link>
-      <Nav.Link ><Link to="/ImgaeComponenet"><button className='btn btn-outline-info'><i class="fas fa-images"></i> Image Search</button></Link></Nav.Link>
+      <Nav.Link ><Link to="/"><button className='btn btn-outline-info btn-block'><i class="far fa-newspaper"></i> word News</button></Link></Nav.Link>
+      <Nav.Link ><Link to="/SearchWidgetMain"><button className='btn btn-outline-info btn-block'><i class="fab fa-wikipedia-w"></i> wikipidia Search</button></Link></Nav.Link>
+      <Nav.Link ><Link to="/DropDown"><button className='btn btn-outline-info btn-block'><i class="fab fa-galactic-senate"></i> Star War Movies</button></Link></Nav.Link>
+      <Nav.Link ><Link to="/ImgaeComponenet"><button className='btn btn-outline-info btn-block'><i class="fas fa-images"></i> Image Search</button></Link></Nav.Link>
       
     </Nav>
     <Form inline>
       <FormControl type="text" id='inputvalu' placeholder={` Search News`} className="mr-sm-2" value={term} onChange={e=>setTerm(e.target.value)} />
-    <Link to={`/SearchWidget`}   > <button onClick={()=>termchange()} className='btn btn-outline-info' ><i class="fas fa-search"></i> News Search</button> </Link> 
+    <Link to={`/SearchWidget`}   > <button onClick={()=>termchange()} className='btn btn-outline-info btn-block' ><i class="fas fa-search"></i> News Search</button> </Link> 
     </Form>
     
   </Navbar.Collapse>
