@@ -7,12 +7,14 @@ const Accor = ({ files }) => {
   useEffect(() => {
     const wikiresulr = async () => {
       const { data } = await axios.get(
-        '/api/topheadline'
+        "http://newsapi.org/v2/top-headlines?" +
+        "country=us&" +
+        "apiKey=295bd0f691604b7f94c1404c1d390e9d"
       );
-      setSearchResult(data);
-      /*if(!searchResult){
-        window.location.reload()
-      }*/
+ 
+      setSearchResult(data.articles);
+      console.log(searchResult)
+     
     };
     wikiresulr();
 
