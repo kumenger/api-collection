@@ -7,18 +7,19 @@ const Accor = ({ files }) => {
   useEffect(() => {
     const wikiresulr = async () => {
       const { data } = await axios.get(
-        "http://newsapi.org/v2/top-headlines?" +
-        "country=us&" +
-        "apiKey=295bd0f691604b7f94c1404c1d390e9d"
+     `/api/topheadline`
       );
  
-      setSearchResult(data.articles);
-      console.log(searchResult)
-     
+      setSearchResult(data);
+    
+      // console.log(searchResult)  "http://newsapi.org/v2/top-headlines?" +
+      //   "country=us&" +
+      //   "apiKey=295bd0f691604b7f94c1404c1d390e9d"
+      //setSearchResult(data.articles);
     };
     wikiresulr();
 
-  }, [searchResult]);
+  }, []);
 
   return (
     <div>

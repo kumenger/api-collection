@@ -19,7 +19,7 @@ const DropDown = () => {
   useEffect(() => {
     const search = async () => {
       const resp = await axios
-        .get(`http://swapi.dev/api/${select}/${numbers}`)
+        .post(`/api/starwar`,{select,numbers})
         .catch((error) => {
           
           setError(error.response);

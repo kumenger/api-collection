@@ -8,7 +8,7 @@ import axios from 'axios'
     export const getNews=(newsToBeSearched)=> async dispatch=>{
      const newsToBeSearche={term:newsToBeSearched}
        
-        const respose=await axios.get(`https://newsapi.org/v2/everything?q=${newsToBeSearched}&apiKey=295bd0f691604b7f94c1404c1d390e9d`)
+        const respose=await axios.post(`/api/searchNew`,newsToBeSearche)
         
       dispatch({type:"Get_Result",payload:respose.data.articles})   }
 
