@@ -20,12 +20,12 @@
 
 # Table of Contents
 
-* [Thecnologies used](#Thecnologies)
+* [Technologies used](#Thecnologies)
 * [Usage](#usage)
 * [Contribution](#contribution)
 * [Questions](#questions)
 
-# Thecnologies
+# Technologies
  - React
  - Readx
  - React-Routers
