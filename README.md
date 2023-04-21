@@ -27,12 +27,16 @@
 
 # Technologies
  - React
- - Readx
+ - Redux
+ - React-Redux
+ - Redux forms
  - React-Routers
  - React-Boostrap
- - Readux-thunk
+ - Redux-thunk
  - Express.js
  - Axios
+ - Heroku (Deployment)
+ - Git and GitHub (Continuous Integration )
 
 
 
