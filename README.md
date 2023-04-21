@@ -12,7 +12,7 @@
  ![image1](https://i.ibb.co/QkKtZbr/Untitled.jpg)
 
 ## Deployed Application :
-[Note Taker](https://damp-refuge-92088.herokuapp.com/)
+[APi collection](https://damp-refuge-92088.herokuapp.com/)
 ## Link to Full Video
 
 [Link to view Full Video of Application](https://www.youtube.com/embed/u8-RcGNyWOA)
